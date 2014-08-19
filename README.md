@@ -25,7 +25,7 @@ https://github.com/JamesHagerman/dtc
 
 Once you have a good, working version of dtc on your beaglebone, you should be able to compile the BB-BONE-LCD7-01-00A3.dts file into it's respective dtbo file using this line:
 
-dtc -O dtb -o BB-BONE-LCD7-01-00A0.dtbo -b 0 -@ BB-BONE-LCD7-01-00A3.dts
+dtc -O dtb -o BB-BONE-LCD7-01-00A3.dtbo -b 0 -@ -I BB-BONE-LCD7-01-00A3.dts
 
 Don't mind the change from 00A3 to 00A0. For some reason the Beaglebone tries to load the 00A0 file even if it doesn't exist and the 00A3 version does. I have no idea how to tell the cape manager to load a specific version of the dtbo file. Any hints would be nice in this regards.
 
