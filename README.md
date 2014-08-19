@@ -33,3 +33,9 @@ I hope someone finds this a bit useful!
 
 Any suggestions or fixes would be awesome!
 
+
+Some notes of getting it on to the BBB
+======================================
+
+cp BB-BONE-LCD7-01-00A3.dts /lib/firmware/
+dtc -O dtb -o /lib/firmware/BB-BONE-LCD7-01-00A3.dtbo -b 0 -@ -I /lib/firmware/BB-BONE-LCD7-01-00A3.dts
