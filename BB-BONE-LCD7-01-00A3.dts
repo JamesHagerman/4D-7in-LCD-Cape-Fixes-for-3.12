@@ -272,7 +272,7 @@
 				};
 			};
 
-			lcdc {
+			/*lcdc {
 				compatible = "ti,am33xx-tilcdc";
 				reg = <0x4830e000 0x0000>;
 				interrupt-parent = <&intc>;
@@ -280,15 +280,15 @@
 				ti,hwmods = "lcdc";
 				ti,power-gpio = <&gpio2 25 0>;
 				ti,allow-non-reduced-blanking-modes;
-			};
+			};*/
 
 		};
 	};
-	/*fragment@4 {
+	fragment@4 {
                 target = <&lcdc>;
                 __overlay__ {
                         status = "okay";
 			ti,power-gpio = <&gpio0 2 0>;
                 };
-        };*/
+        };
 };
