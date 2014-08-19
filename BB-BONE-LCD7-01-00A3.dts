@@ -152,7 +152,7 @@
 
 			tscadc {
 				compatible = "ti,am3359-tscadc";
-				reg = <0x44e0d000 0x1000>;
+				reg = <0x44e0d000 0x00000026>;
 
 				interrupt-parent = <&intc>;
 				interrupts = <16>;
@@ -167,7 +167,7 @@
 				};
 
 				adc {
-					ti,adc-channels = <4 5 6 7>;
+					ti,adc-channels = <0 1 2 3>;
 				};
 			};
 
@@ -285,10 +285,10 @@
 		};
 	};
 	fragment@4 {
-                target = <&lcdc>;
-                __overlay__ {
-                        status = "okay";
+		target = <&lcdc>;
+		__overlay__ {
+			status = "okay";
 			ti,power-gpio = <&gpio0 2 0>;
-                };
-        };
+		};
+	};
 };
